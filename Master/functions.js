@@ -62,7 +62,7 @@ function play11(){
     window.location.href = url;
 }
 function play12(){
-    const url = "https://upyy-appdetareas.netlify.app"
+    const url = "https://upyy-appdetarea.netlify.app"
     window.location.href = url;
 }
  
