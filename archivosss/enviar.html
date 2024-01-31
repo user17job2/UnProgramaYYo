@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Enviar datos con parámetros GET</title>
+  </head>
+  <body>
+    <form>
+      <label for="nombre">Nombre:</label>
+      <input type="text" id="nombre" name="nombre">
+      <button onclick="enviarDatos()">Enviar datos</button>
+    </form>
+
+
+    <script>
+      function enviarDatos() {
+        // Obtener el valor del campo nombre
+        let nombre = document.getElementById("nombre").value;
+        // Construir la URL con el parámetro nombre
+        let url = "recibir.html" + nombre;
+        // Redirigir al usuario a la URL
+        location.href = url;
+      }
+    </script>
+
+
+  </body>
+</html>

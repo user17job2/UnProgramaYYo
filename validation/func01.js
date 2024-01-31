@@ -13,9 +13,9 @@ const showD = document.querySelector('.showder');
 let vir = true;
 
 // las variable mas impoortante pues de esta se validara si si o si no se muestra el contenido  
-let validacion ;
-let validacion2 ;
-let validacion3 ;
+let validacion;
+let validacion2;
+let validacion3;
 let validacion4;
 
 // para validar que usuario ingreso los datos 
@@ -121,12 +121,12 @@ valid.addEventListener('click', function(){
                     if(edad.value >= 18){
                         validd();
                         console.log('si lo es');
-                        h22.innerText=`Contenido para ${Nam.value}:)`;
+                       
 
                     }else{
                         validdd();
                         console.log('no lo es');
-                        h21.innerText=` Contenido para ${Nam.value} :)`;
+                   
 
                     } 
                 }else{
@@ -148,10 +148,10 @@ valid.addEventListener('click', function(){
 });
  //esta funcion mostrara contenido fuera de la clase +A Y B
  function validd(){
-    window.location.href = 'https://genuine-fenglisu-2e8647.netlify.app/' || "http://127.0.0.1:5500/Main/index.html";
+    window.location.href ='https://upyy-unprogramayyo.netlify.app/';
  }
  function validdd(){
-    window.location.href =   "https://loquacious-snickerdoodle-5feb78.netlify.app/" || "http://127.0.0.1:5500/Master/index.html" ;
+    window.location.href ="https://upyy-unprogramayyo.netlify.app/";
 }
 
 const nam = document.querySelector('.nav-div');

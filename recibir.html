@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Recibir datos con parámetros GET</title>
+  </head>
+  <body>
+    <h3>Contenido del archivo:</h3>
+    <pre id="contenido-archivo"></pre>
+    <button id="boton-mostrar" onclick="recibirDatos()">Mostrar contenido</button>
+    <script>
+      function recibirDatos() {
+        // Obtener la URL completa
+        let url = window.location.href;
+        // Extraer los parámetros GET de la URL
+        let parametros = url.split("?")[1];
+        // Mostrar los parámetros en el elemento con id "contenido-archivo"
+        document.getElementById("contenido-archivo").innerHTML = parametros;
+      }
+    </script>
+  </body>
+</html>
