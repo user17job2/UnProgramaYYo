@@ -38,12 +38,12 @@ function play5(){
 }
 function play6(){
     const url = "https://upyy-teclado.netlify.app";
-    window.location.href = "https://www.ejemplo.com";
+    window.location.href = url;
 }
 function play7(){
  
     const url = "https://upyy-jsontocsv.netlify.app"
-    window.location.href = "https://www.ejemplo.com";
+    window.location.href =url;
 }
 function play8(){
     const url = "https://upyy-comment.netlify.app ";
