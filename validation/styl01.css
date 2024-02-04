@@ -8,10 +8,11 @@ body {
   z-index: 0;
   position: absolute;
   width: 98%;
-  height: 630px;
+  height: 615px;
   object-fit: cover;
   border-radius: 10px;
 }
+
 
 h1 {
   position: relative;
@@ -23,32 +24,27 @@ h3 {
   font-size: 30px;
   margin-top: -90px;
 }
-
 #text0 {
   margin-top: 5px;
 }
-
 #text1 {
   margin-top: 35px;
 }
-
 #text2 {
   margin-top: 45px;
 }
-
 #text3 {
   margin-top: 30px;
 }
- 
-
 #app {
   position: absolute;
   left: 25%;
+  top: 15px;
   background-color: rgba(255, 166, 166, 0.388);
   border: 2px solid rgb(180, 0, 0);
   width: 50%;
   padding: 15px;
-  height: 590px;
+  height: 570px;
   border-radius: 10px;
   color: white;
   text-align: center;
