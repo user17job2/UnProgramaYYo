@@ -1,16 +1,14 @@
-
 const valid = document.querySelector('#valid');
 const Nam = document.getElementById('nom');
 const edad = document.getElementById('edad');
 const sus = document.getElementById('sus');
 const pass = document.getElementById('pass');
-const texto1 = document.getElementById('text1');
-const texto2 = document.getElementById('text2');
-const texto3 = document.getElementById('text3');
-const dib = document.getElementById('app2');
-const showD = document.querySelector('.showder');
-
-let vir = true;
+// const texto1 = document.getElementById('text1');
+// const texto2 = document.getElementById('text2');
+// const texto3 = document.getElementById('text3');
+// const dib = document.getElementById('app2');
+// const showD = document.querySelector('.showder');
+// let vir = true;
 
 // las variable mas impoortante pues de esta se validara si si o si no se muestra el contenido  
 let validacion;
@@ -93,22 +91,6 @@ valid.addEventListener('click',()=>{
     }
 });
 
-// aqui se deside que se mostrara al usuario
-//     valid.addEventListener('click', function(){
-//     if(validacion == true){
-//         if(edad.value >= 18){
-//             validd();
-//             console.log('si lo es');
-//         }else{
-//             validdd();
-//             console.log('no lo es');
-//     }
-//     }else{
-//         alert('cumple con los estatutos we');
-//         dib.classList.remove('verde','rojo');
-//     }
-// });
-
 valid.addEventListener('click', function(){
     if(validacion==true ){
         console.log('1hecho');
@@ -147,24 +129,31 @@ valid.addEventListener('click', function(){
     }
 });
  //esta funcion mostrara contenido fuera de la clase +A Y B
- function validd(){
-    window.location.href ='https://upyy-unprogramayyo.netlify.app/';
- }
- function validdd(){
-    window.location.href ="https://upyy-unprogramayyo.netlify.app/";
+function validd(){
+      window.location.href ='https://upyy-unprogramayyo.netlify.app/';
+ //    window.location.href ='http://127.0.0.1:5500/Master/index.html';
 }
-
-const nam = document.querySelector('.nav-div');
-const tes = document.querySelector('#ext');
-const ses = document.querySelector('#btn5');
-
-
-// nam = prompt ("¿Cómo te llamas?", "");
-
-ses.addEventListener('click', function(){
-    nam.innerText =`_ ${tes.value}_`;
-});
-
-  
-
+function validdd(){
+ window.location.href ="https://upyy-unprogramayyo.netlify.app/";
+//     window.location.href ="http://127.0.0.1:5500/Master/index.html";
+}
  
+ 
+// // document.querySelector('#valid').addEventListener('click', e => {
+// //     e.preventDefault();
+// //     obtenerDatos();
+// //     // const Dat = Object.fromEntries(new FormData(e.target))
+// //     // console.log(JSON.stringify(Dat))
+// //     // let dato = document.getElementsByName("texto")[0].value;
+// //     // // Mostrar el valor en una alerta
+// //     // alert(dato);
+// // });
+
+// function obtenerDatos(){
+//     const form = document.querySelector('#app');
+//      console.log(form);
+//     const deira = [];
+//     // for(let )
+
+
+// }

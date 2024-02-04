@@ -11,7 +11,7 @@ body{
     position: relative;
     left: 40px;
     top: 5px;
-    height: 580px;
+    height:590px;
     padding: 10px;
     border-radius: 10px;
     box-shadow: 0px 0px 15px rgb(40, 87, 139);
@@ -94,7 +94,7 @@ a{
         color: rgb(0, 255, 0);     
     }50%{
         transform: translate(0, -5px);
-        color: black;
+        color: rgba(185, 18, 0, 100);
     }100%{
         transform: translate(0, 7px);
         color: rgb(0, 51, 255);
@@ -120,7 +120,7 @@ a{
 .rte{
     background-color: rgba(68, 102, 102, 0.233);
     width: 1047px;
-    height: 500px;
+    height: 590px;
     margin: 10px;
     padding: 5px;
     border-radius: 5px;
@@ -133,7 +133,7 @@ a{
     display: grid;
     grid-template-columns: auto auto;
     position: relative;
-    top: 0px;
+    top: -90px;
     left: -6px;
     padding: 6px;
     border-radius: 5px;
@@ -204,7 +204,7 @@ a{
   from{transform: rotate(0deg);}to{transform: rotate(360deg);}
 }
 .anim:before {
-    border-bottom: 40px solid rgb(0, 198, 216);
+    border-bottom: 40px solid rgba(185, 18, 0, 100);
     border-left: 17px solid transparent;
     border-right: 17px solid transparent;
     position: absolute;
