@@ -11,4 +11,4 @@ let password = pass;
 window.Datus = nombre, Edad, suscripcion, password, 'dios a sido bueno';
 document.cookie = "Dat0s=" + Datus;
 
-export  let {nombr} = document.cookie.split("=")[0,1,2,3];
+// export  let {nombr} = document.cookie.split("=")[0,1,2,3];
