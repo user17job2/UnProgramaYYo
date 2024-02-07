@@ -1,6 +1,6 @@
 const valid = document.querySelector('#valid');
 const Nam = document.getElementById('nom');
-const edad = document.getElementById('edad');
+const ape = document.getElementById('apellido');
 const sus = document.getElementById('sus');
 const pass = document.getElementById('pass');
 // const texto1 = document.getElementById('text1');
@@ -11,6 +11,7 @@ const pass = document.getElementById('pass');
 // let vir = true;
 
 // las variable mas impoortante pues de esta se validara si si o si no se muestra el contenido  
+
 let validacion;
 let validacion2;
 let validacion3;
@@ -27,7 +28,7 @@ valid.addEventListener('click',()=>{
 }
 });
 valid.addEventListener('click',()=>{
- if(edad.value.length == 0){
+ if(ape.value.length == 0){
     console.log('false/');
     validacion2=false;
  }else{
@@ -64,17 +65,12 @@ valid.addEventListener('click',()=>{
     }
 });
     valid.addEventListener('click', ()=>{
-        if(edad.value.length == 0){
-            document.getElementById("text1").innerHTML = `<h4>no tienes edad?</h4>`;
+        if(ape.value.length == 0){
+            document.getElementById("text1").innerHTML = `<h4>eeeeeeeeee?</h4>`;
         } 
-        if(edad.value >= 18){
-            document.getElementById("text1").innerHTML = `<h4>.</h4>`; 
-        }
-        if(edad.value.length != 0){
+        else{
             document.getElementById("text1").innerHTML = `<h4>.</h4>`;
         }
-  
-    
 });
     valid.addEventListener('click', ()=>{
         if(sus.value == 10001){
@@ -100,16 +96,12 @@ valid.addEventListener('click', function(){
                 console.log('3hecho');
                 if(validacion4 == true){
                     console.log('4hecho');
-                    if(edad.value >= 18){
-                        validd();
+                    if(ape.value != 3 ){
+                        validdd();
                         console.log('si lo es');
-                       
-
-                    }else{
+                       }else{
                         validdd();
                         console.log('no lo es');
-                   
-
                     } 
                 }else{
                     console.log('4Error');
@@ -128,32 +120,7 @@ valid.addEventListener('click', function(){
         alert('cumple con los estatutos we');
     }
 });
- //esta funcion mostrara contenido fuera de la clase +A Y B
-function validd(){
-      window.location.href ='https://upyy-unprogramayyo.netlify.app/';
- //    window.location.href ='http://127.0.0.1:5500/Master/index.html';
-}
+
 function validdd(){
- window.location.href ="https://upyy-unprogramayyo.netlify.app/";
-//     window.location.href ="http://127.0.0.1:5500/Master/index.html";
+ window.location.href ="http://127.0.0.1:5500/Master/index1.html";
 }
- 
- 
-// // document.querySelector('#valid').addEventListener('click', e => {
-// //     e.preventDefault();
-// //     obtenerDatos();
-// //     // const Dat = Object.fromEntries(new FormData(e.target))
-// //     // console.log(JSON.stringify(Dat))
-// //     // let dato = document.getElementsByName("texto")[0].value;
-// //     // // Mostrar el valor en una alerta
-// //     // alert(dato);
-// // });
-
-// function obtenerDatos(){
-//     const form = document.querySelector('#app');
-//      console.log(form);
-//     const deira = [];
-//     // for(let )
-
-
-// }

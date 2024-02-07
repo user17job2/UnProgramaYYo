@@ -15,7 +15,7 @@ const contentn = document.querySelector('.content');
     susss:`${subs}`,
     passs:`${passw}`
  }
- console.log(usuario);
+ console.log(usuario.eedad, usuario.nome);
 //  console.log(JSON.stringify( usuario,));
 
 // console.log(usuario.eedad)

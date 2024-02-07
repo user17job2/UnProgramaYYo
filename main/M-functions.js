@@ -14,12 +14,11 @@ ses.addEventListener('click', function(){
 
 // ( function (){
 // }) ();
-
+/*
 function play(){
     let url = 'https://upyy-unprogramayyo-calculator.netlify.app';
     window.location.href = url;
 };
-
 function play2(){
      const url = 'https://upyy-unprogramayyo-chat.netlify.app';
     window.location.href = url;
@@ -64,6 +63,6 @@ function play12(){
     const url = "https://upyy-unprogramayyo-appdetarea.netlify.app"
     window.location.href = url;
 }
-
+*/
 
 

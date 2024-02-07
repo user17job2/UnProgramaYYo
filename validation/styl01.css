@@ -13,7 +13,17 @@ body {
   border-radius: 10px;
 }
 
-
+textarea{
+  position: relative;
+  top: -150px;
+  text-align: right;
+  width: 280px;
+  height: 125px;
+  left: -490px;
+  background-color: #111a25;
+  opacity: 100%;
+  color: #ffffff; 
+}
 h1 {
   position: relative;
   font-size: 60px;

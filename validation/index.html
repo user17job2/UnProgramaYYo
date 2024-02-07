@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>validation</title>
     <link rel="stylesheet" href="styl01.css">
-    <link rel="shortcut icon" href="0004.png">
+    <link rel="shortcut icon" href="0001.png">
 </head>
 <body>
 <section id="uno">
@@ -13,7 +13,7 @@
     <img src="https://wallpapers.com/images/high/red-and-black-background-dp7vxcnkr528c7n7.webp" alt="." class="back">
 <div id="al"></div>
  
-    <form id="app"> 
+    <form id="app" netlify> 
         <h1>Hola</h1>
         <h3>Control de Acceso</h3>
         <!-- nombre  --> <br>
@@ -21,8 +21,8 @@
         <input type="text" id="nom" placeholder="Usuario">
         <div id="text0"></div>
         <!-- EDAD --> <br>
-        <label for="edad">Edad</label>
-        <input type="text" id="edad" placeholder="Edad">
+        <label for="edad">apellido</label>
+        <input type="text" id="apellido" placeholder="Apellido">
         <div id="text1"></div>
         <!-- suscripcion --> <br>
         <label for="sus">Suscripcion</label>
@@ -32,6 +32,11 @@
         <label for="pass">Pass</label>
         <input type="text" id="pass" placeholder="Password">
         <div id="text3"></div>
+
+        <div id="comm">
+            <textarea name="coment" id="comment" cols="50" rows="10" placeholder="Alguna sugerencia?"></textarea>
+        </div>
+
         <button id="valid" type="submit">validar</button>
     </form>
 
@@ -39,7 +44,6 @@
 </section>
 
 <script src="V-funcions.js"></script>
-<script src="V-recepcion.js"></script>
-<script src="V-recepcion2.js" type="module"></script>
+<script src="V-recepcion.js"></script> 
 </body>
 </html>
