@@ -122,5 +122,5 @@ valid.addEventListener('click', function(){
 });
 
 function validdd(){
- window.location.href ="http://127.0.0.1:5500/Master/index1.html";
+ window.location.href ="https://upyy-unprogramayyo.netlify.app/";
 }
