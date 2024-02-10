@@ -30,11 +30,14 @@ function menssage(){
     
 }   
 function handleSubmit(e){
-            e.preventDefault();
-            const inputV = input.value;
-            createTask(inputV);
-            this.reset();
-            menssage();
+     e.preventDefault();
+    const inputV = input.value;
+     createTask(inputV);
+     this.reset();
+     menssage();
+//enviar losdatos del input al localStorage
+          const tarea = localStorage.setItem("1-", inputV);
+  
 }   
 function createTask(value){ 
             const newTask = document.createElement("li");
@@ -52,7 +55,7 @@ function addEvents(element){
             });
 }
 
-const wrap = document.querySelector('.wrapper');
+ const wrap = document.querySelector('.wrapper');
 
 
 // para clonar un elemento en el DOM
