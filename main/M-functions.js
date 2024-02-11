@@ -1,4 +1,6 @@
- 
+alert("actually in process :)"); 
+
+
 let nam = document.getElementById('nav--user');
 let nam2 = document.getElementById('nav--use');
 let tes = document.getElementById('ext');
