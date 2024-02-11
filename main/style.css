@@ -1,9 +1,9 @@
 *{
-    background-color: rgba(0, 255, 255, 0);
+    background-color: rgba(0, 255, 255, 0.936);
     text-decoration-color: rgba(0, 255, 255, 0);
 }
 body{
-overflow: hidden;
+/* overflow: hidden; */
 background-image: linear-gradient( 75deg,  rgb(19, 185, 0) 0%, blue 99%);;
 background-repeat: no-repeat;
 color: aqua;
@@ -16,14 +16,14 @@ a{
 font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 background-color: rgb(23, 54, 81);
 width: 1150px;
+height:590px;
+padding: 10px;
 position: relative;
 left: 40px;
 top: 5px;
-height:590px;
-padding: 10px;
 border-radius: 10px;
 box-shadow: 0px 0px 15px rgb(40, 87, 139);
-overflow-x: hidden;
+/* overflow-x: hidden; */
 overflow-y: auto;
 }
 #apk::-webkit-scrollbar-track {
@@ -109,7 +109,7 @@ border-radius: 5px;
 .nav-div::-webkit-scrollbar-thumb {
 background-color:  rgba(18, 185, 0, 0); /* color del botón de desplazamiento */
 border-radius: 20px; /* redondez del botón de desplazamiento */
-border: 5px solid rgba(191, 255, 182, 0); /* crea un relleno alrededor del botón de desplazamiento */
+border: 5px solid #bfffb600; /* crea un relleno alrededor del botón de desplazamiento */
 }
 .nav-div:nth-child(3){
 position: relative;
@@ -118,19 +118,7 @@ color: rgb(87, 108, 82);
 animation: muv 2s linear infinite;
 background-color: rgba(240, 248, 255, 0);
 }
-@keyframes muv{
-0%{
-    transform: translate(0, 7px);   
-    color: rgb(0, 255, 0);     
-}50%{
-    transform: translate(0, -5px);
-    color: rgba(185, 18, 0, 100);
-}100%{
-    transform: translate(0, 7px);
-    color: rgb(0, 51, 255);
-}
 
-}
 .nav-link{
 margin-left: 250px;
 width: 120px;
@@ -148,7 +136,7 @@ border: 5px solid  rgb(0, 242, 255);
 opacity: 100%;
 }
 .rte{
-background-color: rgba(68, 102, 102, 0.233);
+background-color: rgba(68, 102, 102, 0);
 width: 1047px;
 height: 590px;
 margin: 10px;
@@ -177,19 +165,9 @@ border-right: 3px solid ;
 animation: typing 3s steps(50), efecto .5s step-end infinite  alternate-reverse;
 background-color: rgba(250, 235, 215, 0);
 }
-@keyframes typing {
-from{
-    clip-path: polygon(0 0, 0 0, 0 100%, 0% 100%);
-}to{
-    clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
-}    
-}
-@keyframes efecto { 
-50%{
-    border-color:  rgba(13, 211, 218, 0.929);
-}
-}
+
 .dip-p{
+background-color: rgba(240, 248, 255, 0);
 color:rgb(175, 175, 255) ;
 font-family: "Pixelify Sans", sans-serif;
 }
@@ -232,9 +210,7 @@ box-shadow:0px 0px 5px rgb(19, 148, 194) ;
 background-color: rgba(16, 232, 232, 0); 
 
 }
-@keyframes muv2{
-from{transform: rotate(0deg);}to{transform: rotate(360deg);}
-}
+ 
 .anim:before {
 border-bottom: 40px solid rgba(185, 18, 0, 100);
 border-left: 17px solid transparent;
@@ -304,4 +280,42 @@ input{
 width: 170px;
 height: 25px;
 background-color: aliceblue;
+};
+/* @media only screen and (min-width: 600px); */
+
+@media only screen and (max-width: 680px) {
+    body {
+      background-color: lightgreen;
+      display: none;
+    }
+  }
+
+@keyframes typing {
+    from{
+        clip-path: polygon(0 0, 0 0, 0 100%, 0% 100%);
+    }to{
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+    }    
 }
+@keyframes efecto { 
+    50%{
+        border-color:  rgba(13, 211, 218, 0.929);
+    }
+}
+@keyframes muv2{
+    from{transform: rotate(0deg);}to{transform: rotate(360deg);}
+}    
+@keyframes muv{
+    0%{
+        transform: translate(0, 7px);   
+        color: rgb(0, 255, 0);     
+    }50%{
+        transform: translate(0, -5px);
+        color: rgba(185, 18, 0, 100);
+    }100%{
+        transform: translate(0, 7px);
+        color: rgb(0, 51, 255);
+    }
+    
+}
+
