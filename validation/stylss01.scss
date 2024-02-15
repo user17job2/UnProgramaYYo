@@ -25,21 +25,19 @@ h3{
     font-size: 30px;
     margin-top: -90px;
 }
- 
-
 #text0 {
-    margin-top: 5px;
+    margin-top: -5px;
 }
 #text1{
-    margin-top: 35px;
-
-}
-#text2{
     margin-top: 45px;
 
 }
+#text2{
+    margin-top: 35px;
+
+}
 #text3{
-    margin-top: 30px;
+    margin-top: 40px;
 }
 #app{
     position: absolute;
@@ -59,7 +57,7 @@ input{
     position: relative;
     top: 5px;
     text-align: right;
-    width: 550px;
+    width: 80%;
     height: 45px;
     left: 20px;
     background-color: #111a25;
@@ -86,6 +84,19 @@ input:nth-child(17){
     position: absolute;
     top: 460px;
     left: 50px;
+}
+#comment{
+    position: relative;
+    left: -40%;
+    top: -320px;
+    width: 16%;
+    height: 35px;
+    background: #111a25;
+    opacity: 50%;
+    color: aliceblue;
+}
+#comment:hover{
+    opacity: 100%;
 }
 //
 label{
@@ -119,7 +130,7 @@ label:nth-child(16){
     top: 550px;
     left: 240px;
     padding: 10px;
-    width: 175px;
+    width: 25%;
     font-size: 20px;
     font-weight: 600;
 }
@@ -137,9 +148,9 @@ label:nth-child(16){
     transition-property: color;
     -webkit-transition-duration: 0.5s;
     transition-duration: 0.5s;
-  }
-  #valid:before {
-    content: "";
+}
+#valid:before { 
+  content: "";
     position: absolute;
     z-index: -1;
     top: 0;
@@ -157,18 +168,72 @@ label:nth-child(16){
     transition-duration: 0.5s;
     -webkit-transition-timing-function: ease-out;
     transition-timing-function: ease-out;
-  }
-  #valid:hover, #valid:focus,  #valid:active {
+}
+#valid:hover, #valid:focus,  #valid:active {
     color: white;
-  }
-  #valid:hover:before, #valid:focus:before, #valid:active:before {
+}
+#valid:hover:before, #valid:focus:before, #valid:active:before {
     -webkit-transform: scaleX(1);
     transform: scaleX(1);
     -webkit-transition-timing-function: cubic-bezier(0.52, 1.64, 0.37, 0.66);
     transition-timing-function: cubic-bezier(0.52, 1.64, 0.37, 0.66);
-  }
+}
   
-
-  
+  @media screen and (max-width:600px) {
+    #app{
+        width: 90%;
+        height: 650px;
+        left: 1%;
+    }
+    h1{
+        position: relative;
+        font-size: 40px;
+        top: -40px;
+    }
+    h3{
+        font-size: 30px;
+        margin-top: -55px;
+    }
+    input{
+        width: 80%;
+        height: 50px;
+        margin: auto;
+    }
+    #comment{
+        width: 100px;
+        height: 55px;
+        position: absolute;
+        top: 550px;
+        left: 70%;
+        background: #111a25;
+        color: aliceblue;
+    }
+    #valid{
+        width: 200px;
+        height: 45px;
+        border-radius:15px;
+        top: 627px;
+        left: 30%;
+        background-color: #111a25;
+    }
+    label{
+        font-weight: 550;
+        color:#502d2d;
+    }
+    #text0 {
+        margin-top: 35px;
+    }
+    #text1{
+        margin-top: 45px;
+    
+    }
+    #text2{
+        margin-top: 35px;
+    
+    }
+    #text3{
+        margin-top: 40px;
+    }
+}
 
    
