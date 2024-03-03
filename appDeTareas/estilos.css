@@ -7,119 +7,167 @@ body{
    width: 99%;
     background-color:rgba(15, 111, 135, 0);
    padding: 5px;
-
+   border: 1px solid  rgb(250, 235, 215);
+   border-radius: 7px;
 }
 
+nav{
+    position: absolute;
+    width: 98%;
+    height: 128px;
+    background-color: rgba(210, 210, 210, 0);
+    border-radius: 5px;
+    padding: 10px;
+}
+/* input para agregar tareas*/
 #nuevaTarea{
     color: antiquewhite;
    width: 30%;
     height: 80px;
    border-radius: 5px;
-    position: relative;
+    position:absolute;
    font-size: 25px;
-   left: 2%;
+   left: 0.5%;
+   top: 5px;
    background-color:rgb(12, 99, 125); 
-
 }
+/* boton para agregar tarea */
+.btnbtn{
+    background-color: rgb(12, 99, 125);
+    color:  bisque;
+     width: 10%;
+    height:30%;
+     font-size: 25px;
+     border: 2px solid ; 
+     border-radius: 5px;
+     font-weight: 550;
+     position: absolute;
+     left: 0.5%;
+     top: 85px;
+     transition: 0.5s;
+ }
+ .btnbtn:hover{
+     /* background-color:rgb(12, 99, 125); ; */
+    box-shadow: inset -5px 5px 10px rgb(8, 58, 89);
+     color:rgb(255, 238, 217);
+    cursor: pointer; 
+ }
+ .btnbtn:active{
+    box-shadow: inset 5px -5px 10px rgb(8, 58, 89);
+     background-color:rgb(15, 99, 135); 
+ }
+/* boton hacia El MAin */
 .btnL{
-   width: 10%;
-    height: 28%;
-   text-align: center;
-    /* padding: 0px; */
-   border-radius:3px;
-    background-image:linear-gradient(75deg, rgb(3, 197, 3) 10%, rgb(14, 14, 248) 99%) ;
-   position: relative;
-   text-decoration: none;
     color: aliceblue;
-   font-size: 20px;
-    font-weight: 550;
+   background-image:linear-gradient(75deg, rgb(3, 197, 3) 10%, rgb(14, 14, 248) 99%) ;
+    width: 12%;
+   height: 28%;
+    font-size: 20px;
+   border-radius:3px;
+    padding: 3px;
+   font-weight: 550;
+    position: relative;
+   text-align: center;
+    color: aliceblue;
+   left: 43%;
+    text-decoration: none;
    transition: 0.5s;
-    left: 43%;
-
 }
 .btnL:hover{
     background-image:linear-gradient(75deg, rgb(14, 14, 248) 10%, rgb(3, 197, 3) 99%) ;
    box-shadow: 0px 0px 10px black;
-    transform: scale(1.1);
+    transform: scale(1.5);
    cursor: pointer; 
 }
+/* boton para cambio de modo */
+#btnClasses{
+    background-color: rgb(25, 25, 68);
+    width: 4.5pc;
+    height: 30%;
+     font-size: 20px;
+    border-radius:3px;
+     padding:0px;
+    font-weight: 550;
+     position: relative;
+    text-align: center;
+     color:rgb(250, 235, 215);
+    left: 85.4%;
+    top: 30px;
+     text-decoration: none;
+    transition: 0.5s;
+}
+#btnClasses:hover{
+   box-shadow: 0px 0px 10px rgb(255, 255, 255);
+    background-color:rgb(250, 235, 215);
+    color: rgb(25, 25, 68);
+    cursor: pointer;
+    transform: scale(1.1);
+}
+/* contenedor de el titulo */
+.contenedorTitulo{
+    background-color: rgba(0, 255, 255, 0);
+    width: 35%;
+    /* height: ; */
+    position: relative;
+    top: -45px;
+    left: 50%;
+}
+/*input para el dueno de las tareas*/
 .title .inputT{
    background-color:rgb(12, 99, 125); ;
     color: antiquewhite;
-   width: 70%;
+   width: 90%;
     height: 80px;
-    left: -14%;
-   position: relative;
     border-radius: 5px;
+    position: relative;
+    top: -20px;
+    /* left: 15%; */
 }
 .btn-addTitle{
-   background-color: rgb(250, 235, 215);
-    width: 10%;
-   height:40%;
-    border: 3px solid ;
-   border-radius: 3px;   
-    position: relative;
-   transition: 0.5s;
+   background-color:rgb(12, 99, 125);
+    width: 30%;
+   height: 38px;
+    border: 2px solid;   
     font-size: 25px;
-    left: -47.9%;
     font-weight: 550;
-   color:  rgb(8, 58, 89);
-    border-radius: 5px;
+   border-radius: 5px;
+    position: relative;
+     left: 65%;
+     top: -28px; 
+    color:  bisque;
+    transition: 0.5s;
 }
+/*  */
 .btn-addTitle:hover{
-   background-color:rgb(12, 99, 125); 
+   /* background-color:rgb(255, 228, 196);  */
     box-shadow: inset 5px 5px 10px rgb(8, 58, 89);
-   color: bisque;
+   color: rgb(255, 240, 221);
     cursor: pointer; 
 }
 .btn-addTitle:active{
    box-shadow: inset -5px -5px 10px rgb(8, 58, 89);
     background-color:rgb(15, 99, 135); 
 }
-.btnbtn{
-   background-color: rgb(250, 235, 215);
-    width: 10%;
-    height:40%;
-    border: 3px solid ;
-   border-radius: 3px;   
-    position: relative;
-   transition: 0.5s;
-    font-size: 25px;
-    left: 2.5%;
-   /* padding-top: 5px; */
-    font-weight: 550;
-   color:  rgb(8, 58, 89);
-    border-radius: 5px;
-}
-.btnbtn:hover{
-    background-color:rgb(12, 99, 125); ;
-   box-shadow: inset 5px 5px 10px rgb(8, 58, 89);
-    color: bisque;
-   cursor: pointer; 
-}
-.btnbtn:active{
-   box-shadow: inset -5px -5px 10px rgb(8, 58, 89);
-    background-color:rgb(15, 99, 135); 
-}
+
+/* contenedor de las tareas */
 section{
    background-color: rgb(27, 79, 101);
     border-radius: 5px;
-   height: 500px;
+   height: 490px;
    width: 98%;
     position: absolute;
    bottom: 5px;
-    /* overflow: hidden; */
    overflow-y: scroll;
     padding: 10px 0px  10px 30px;
    align-items: center;
     display: grid;
-    /* grid-area: 10px; */
    grid-template-columns: auto auto auto auto;
   
 }
 section::-webkit-scrollbar{
     background-color: transparent;
 }
+/* las tareass*/
 section > div{
    text-align: center;
     width: 95%;
@@ -143,17 +191,6 @@ section > div::-webkit-scrollbar{
 h3{
     color:rgb(12, 99, 125);
 }
-nav{
-    position: absolute;
-    width: 98%;
-    height: 120px;
-    background-color: rgb(213, 249, 249);
-    border-radius: 5px;
-    padding: 10px;
-    display: flex;
-}
-
-
 
 @media screen and (max-width: 995px) {
     section{
@@ -172,10 +209,33 @@ nav{
         font-size: 20px;
     }
 }
-
-
 @media screen and (max-width: 555px) {
+    nav{
+        width: 97%;
+    }
     section{
+        height: 570px;
         grid-template-columns: auto  ;
+        overflow-x:hidden ;
+        bottom: 5px;
+    }
+    .contenedorTitulo{
+        left: 48%;
+    }
+    .btnbtn{
+        width: 20%;
+        font-size: 20px;
+        text-align: center;
+    }
+    .btn-addTitle{
+        left: 48%;
+        width: 47%;
+        font-size: 20px;
+    }
+    #btnClasses{
+        left: 83%;
+    }
+    section{
+        width: 97%;
     }
 }
