@@ -153,10 +153,10 @@ nav{
 section{
    background-color: rgb(27, 79, 101);
     border-radius: 5px;
-   height: 490px;
+   height: 86vh;
    width: 98%;
     position: absolute;
-   bottom: 5px;
+   top: 140px;
    overflow-y: scroll;
     padding: 10px 0px  10px 30px;
    align-items: center;
@@ -174,7 +174,7 @@ section > div{
     border-radius: 5px;
    background-color:antiquewhite;
    padding: 10px;
-   margin: 50px;
+   margin: 30px;
    margin-left: -5px;
     overflow: scroll;
     border: solid white;
@@ -197,6 +197,7 @@ h3{
         grid-template-columns: auto auto auto ;
     }
 }
+
 @media screen and (max-width: 750px) {
     body{
         text-decoration: none;
