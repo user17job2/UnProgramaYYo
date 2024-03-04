@@ -179,17 +179,34 @@ section > div{
     overflow: scroll;
     border: solid white;
   transition: 0.5s;
+  animation: mover 3s linear infinite;
 }
 section > div:hover{
     cursor: pointer;
-    transform: scale(1.2);
     box-shadow: 0px 0px 35px black;
+    transform: scale(1.2);
 }
 section > div::-webkit-scrollbar{
     background-color: transparent;
+
 }
 h3{
     color:rgb(12, 99, 125);
+}
+
+@keyframes mover {
+    0%{
+        transform: translate(0px, 0px);
+    }
+    30%{
+        transform: translate(0px, 3px);
+    }
+    60%{
+        transform: translate(0px, -3px);
+    }
+    100%{
+        transform: translate(0px, 0px);
+    }
 }
 
 @media screen and (max-width: 995px) {
