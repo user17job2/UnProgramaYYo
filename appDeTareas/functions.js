@@ -1,45 +1,56 @@
   // Obtener la lista de tareas desde el localStorage
   const tareasGuardadas = JSON.parse(localStorage.getItem('tareas')) || [];
-  // const descricionesGuardadas = JSON.parse(localStorage.getItem('descriciones')) || [];
   const btn = document.querySelector('.btnbtn');
+  
   btn.addEventListener('click', agregarTarea);
-  // btn.addEventListener('click', agregarDescripcion);
-
-  // Mostrar las tareas en la lista
 function mostrarTareas() {
-      const listaTareas = document.getElementById('listaTareas');
-      listaTareas.innerHTML = '';
-      tareasGuardadas.forEach((tarea, index) => {
-          const li = document.createElement('div');
-          li.innerHTML = `<h4 class="h33">${tarea}</h4>
-          <textarea id="textArea" class="input bg-dark text-light" placeholder="Descripcion" cols="20" rows="5"></textarea>`
-          li.classList.add('tArea');
-          li.classList.add('col-12','border','bg-info');
-          li.setAttribute("name", "tareas")
-          li.addEventListener('dblclick', () => eliminarTarea(index));
-          // li.addEventListener('dblclick', () => removeDes(index));v
-          listaTareas.appendChild(li);
+  const listaTareas = document.getElementById('listaTareas');
+  listaTareas.innerHTML = '';
+  tareasGuardadas.forEach((tarea, index) => {
+  const li = document.createElement('div');
+  li.innerHTML = `<h4 class="h33">${tarea}</h4>
+    <textarea id="textArea" class="input fs-6 text-light" placeholder="Descripcion" cols="20" rows="5"></textarea>`
+  li.classList.add('tArea');
+  li.classList.add('col-12','border');
+  li.setAttribute("name", "tareas")
+  li.addEventListener('dblclick', () => eliminarTarea(index));
+  listaTareas.appendChild(li);
+          
+const textAreas = document.querySelectorAll('textarea');
+    
+// Escucha el evento de cambio en cada <textarea>
+  textAreas.forEach((textarea, index) => {
+    textarea.addEventListener('input', () => {
+    const descripcionTarea = textarea.value;
+    localStorage.setItem(`descripcionTarea${index}`, descripcionTarea);
+    });
+        
+        // Al cargar la página, verifica si hay descripciones guardadas y muéstralas en los <textarea>
+  const descripcionGuardada = localStorage.getItem(`descripcionTarea${index}`);
+    if (descripcionGuardada) {
+      textarea.value = descripcionGuardada; 
+    }          
+  }); 
       });
 }
   // Agregar una nueva tarea
 function agregarTarea(){
-      const nuevaTarea = document.getElementById('nuevaTarea').value;
-      if (nuevaTarea.trim() !== '') {
-        tareasGuardadas.push(nuevaTarea);
-        localStorage.setItem('tareas', JSON.stringify(tareasGuardadas));
-        mostrarTareas();
-        document.getElementById('nuevaTarea').value = '';
-      }
+ const nuevaTarea = document.getElementById('nuevaTarea').value;
+  if (nuevaTarea.trim() !== '') {
+    tareasGuardadas.push(nuevaTarea);
+    localStorage.setItem('tareas', JSON.stringify(tareasGuardadas));
+    mostrarTareas();
+    document.getElementById('nuevaTarea').value = '';
+  }
 }
   // Eliminar una tarea
 function eliminarTarea(index) {
-      tareasGuardadas.splice(index, 1);
-      localStorage.setItem('tareas', JSON.stringify(tareasGuardadas));
-      mostrarTareas();
-      // removeDes(index)
+  tareasGuardadas.splice(index, 1);
+  localStorage.setItem('tareas', JSON.stringify(tareasGuardadas));
+  mostrarTareas();
 }
   // Mostrar las tareas al cargar la página
-  mostrarTareas();
+mostrarTareas();
 
 const inputT = document.querySelector('.inputT');  
 const addTitle = document.querySelector('.btn-addTitle');
@@ -77,21 +88,20 @@ const Color =  document.getElementById('btnClasses');
  let estado = true; 
  Color.addEventListener('click', ()=>{
 if(estado=== true){
-    //nav
-    document.querySelector('nav').style.backgroundColor='rgb(25, 25, 50)';
-    document.querySelector('nav').style.border='1px solid white';
-    document.querySelector('nav').style.transition='1s';
     //body
     document.querySelector('body').style.backgroundColor='rgb(25, 25, 50)';
     document.querySelector('body').style.transition='1s';
     // inputs
     document.querySelector('input').style.backgroundColor='rgb(25, 25, 68)'
+    document.querySelector('input').style.color='rgb(255, 255, 255)';
     document.querySelector('input').style.transition='1s'
     //
     document.querySelector('#nuevaTarea').style.backgroundColor='rgb(25, 25, 68)';
+    document.querySelector('#nuevaTarea').style.color='rgb(255, 255, 255)';
     document.querySelector('#nuevaTarea').style.transition='1s'
     //sus botones 
     document.querySelector('.btn-addTitle').style.backgroundColor='rgb(25, 25, 68';
+    document.querySelector('.btn-addTitle').style.color='rgb(255, 255, 255)';
     document.querySelector('.btn-addTitle').style.transition='1s';
     //
     document.querySelector('.btnbtn').style.backgroundColor='rgb(25, 25, 68';
@@ -106,25 +116,32 @@ if(estado=== true){
     // console.log(tareasGuardadas)
     const elementosMenu = document.getElementsByClassName('tArea');
     for (let i = 0; i < elementosMenu.length; i++) {
-    elementosMenu[i].style.backgroundColor = 'transparent';
+    elementosMenu[i].style.backgroundColor = 'rgb(25, 25, 50)';
+    elementosMenu[i].style.color = ' #fff';
     elementosMenu[i].style.transition = '1s';
     }
+
+    const elementosMe = document.getElementsByClassName('input');
+    for (let i = 0; i < elementosMe.length; i++) {
+    elementosMe[i].style.backgroundColor = 'rgb(25, 25, 50)';
+    elementosMe[i].style.color = ' #fff';
+    elementosMe[i].style.transition = '1s';
+    }
     estado=false;
-}else{
-    document.querySelector('nav').style.transition='1s';
-    document.querySelector('nav').style.border='none';
-    document.querySelector('nav').style.backgroundColor='transparent';
-    
+}else{    
     document.querySelector('body').style.backgroundColor='rgb(12, 99, 125)';
     document.querySelector('body').style.transition='1s';
 
-    document.querySelector('input').style.backgroundColor='rgb(15, 100, 125)'
+    document.querySelector('input').style.backgroundColor='#fff'
+    document.querySelector('input').style.color='rgb(0, 0, 0)';
     document.querySelector('input').style.transition='1s'
 
-    document.querySelector('#nuevaTarea').style.backgroundColor='rgb(15, 100, 125)';
+    document.querySelector('#nuevaTarea').style.backgroundColor='#fff';
+    document.querySelector('#nuevaTarea').style.color='rgb(0, 0, 0)';
     document.querySelector('#nuevaTarea').style.transition='1s'
 
     document.querySelector('.btn-addTitle').style.backgroundColor='rgb(12, 99, 125)';
+    document.querySelector('.btn-addTitle').style.color='rgb(255, 255, 255)';
     document.querySelector('.btn-addTitle').style.transition='1s';
 
     document.querySelector('.btnbtn').style.backgroundColor='rgb(12, 99, 125)';
@@ -135,43 +152,14 @@ if(estado=== true){
 
     const elementosMenu = document.getElementsByClassName('tArea');
     for (let i = 0; i < elementosMenu.length; i++) {
-    elementosMenu[i].style.backgroundColor ='antiquewhite';
+    elementosMenu[i].style.backgroundColor ='#fff';
+    elementosMenu[i].style.color ='black';
     elementosMenu[i].style.transition ='1s';  
     }
     estado=true
   }
 
 });
-
-
-//
-//
-//
-
-// const btnt = document.getElementById('btnSD')
-// btnt.addEventListener('click', guardarDescripcion)
-
-const textAreas = document.querySelectorAll('textarea');
-    
-// Escucha el evento de cambio en cada <textarea>
-    textAreas.forEach((textarea, index) => {
-        textarea.addEventListener('input', () => {
-            const descripcionTarea = textarea.value;
-            localStorage.setItem(`descripcionTarea${index}`, descripcionTarea);
-        });
-        
-        // Al cargar la página, verifica si hay descripciones guardadas y muéstralas en los <textarea>
-            const descripcionGuardada = localStorage.getItem(`descripcionTarea${index}`);
-            if (descripcionGuardada) {
-                textarea.value = descripcionGuardada;
-            }          
-
-}); 
-function removeDes(index){
-  const descripcionGuardada = localStorage.removeItem(`descripcionTarea${index}`);
-  console.log(descripcionGuardada);
-  alert('hola')
-}
 
 //  zona de codigo reusable
 /*
