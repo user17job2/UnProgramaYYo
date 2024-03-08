@@ -11,11 +11,13 @@ function mostrarTareas() {
       listaTareas.innerHTML = '';
       tareasGuardadas.forEach((tarea, index) => {
           const li = document.createElement('div');
-          li.innerHTML = `<h3 class=h33>${tarea}</h3>`
-//                  por site llega a dificultar aqui va un textContent
+          li.innerHTML = `<h4 class="h33">${tarea}</h4>
+          <textarea id="textArea" class="input bg-dark text-light" placeholder="Descripcion" cols="20" rows="5"></textarea>`
           li.classList.add('tArea');
+          li.classList.add('col-12','border','bg-info');
           li.setAttribute("name", "tareas")
-         li.addEventListener('dblclick', () => eliminarTarea(index));
+          li.addEventListener('dblclick', () => eliminarTarea(index));
+          // li.addEventListener('dblclick', () => removeDes(index));v
           listaTareas.appendChild(li);
       });
 }
@@ -34,6 +36,7 @@ function eliminarTarea(index) {
       tareasGuardadas.splice(index, 1);
       localStorage.setItem('tareas', JSON.stringify(tareasGuardadas));
       mostrarTareas();
+      // removeDes(index)
 }
   // Mostrar las tareas al cargar la página
   mostrarTareas();
@@ -140,6 +143,35 @@ if(estado=== true){
 
 });
 
+
+//
+//
+//
+
+// const btnt = document.getElementById('btnSD')
+// btnt.addEventListener('click', guardarDescripcion)
+
+const textAreas = document.querySelectorAll('textarea');
+    
+// Escucha el evento de cambio en cada <textarea>
+    textAreas.forEach((textarea, index) => {
+        textarea.addEventListener('input', () => {
+            const descripcionTarea = textarea.value;
+            localStorage.setItem(`descripcionTarea${index}`, descripcionTarea);
+        });
+        
+        // Al cargar la página, verifica si hay descripciones guardadas y muéstralas en los <textarea>
+            const descripcionGuardada = localStorage.getItem(`descripcionTarea${index}`);
+            if (descripcionGuardada) {
+                textarea.value = descripcionGuardada;
+            }          
+
+}); 
+function removeDes(index){
+  const descripcionGuardada = localStorage.removeItem(`descripcionTarea${index}`);
+  console.log(descripcionGuardada);
+  alert('hola')
+}
 
 //  zona de codigo reusable
 /*

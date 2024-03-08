@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>App de Notas</title>
+</head>
+<body>
+    <textarea id="descripcion" rows="4" cols="50"></textarea>
+    <button onclick="guardarDescripcion()">Guardar</button>
+
+<!--aqui se guarda con boton pero en un solo textarea-->
+<script>
+        // Función para guardar la descripción en el localStorage
+        function guardarDescripcion() {
+            const descripcionTextarea = document.getElementById('descripcion');
+            const descripcion = descripcionTextarea.value;
+
+            // Guardar en el localStorage
+            localStorage.setItem('descripcionTarea', descripcion);
+
+            // Pintar el valor en pantalla
+            descripcionTextarea.value = descripcion;
+        }
+
+        // Cargar la descripción almacenada en el localStorage al cargar la página
+        window.onload = function() {
+            const descripcionGuardada = localStorage.getItem('descripcionTarea');
+            if (descripcionGuardada) {
+                document.getElementById('descripcion').value = descripcionGuardada;
+            }
+        };
+</script>
+
+<!-- aqui tiene el efeto de autoguardado de las descripciones -->
+<!--
+<script>
+    // Obtén referencias a los elementos <textarea> en tu HTML
+    const textAreas = document.querySelectorAll('textarea');
+    
+    // Escucha el evento de cambio en cada <textarea>
+        textAreas.forEach((textarea, index) => {
+            textarea.addEventListener('input', () => {
+                const descripcionTarea = textarea.value;
+                localStorage.setItem(`descripcionTarea${index}`, descripcionTarea);
+            });
+            
+            // Al cargar la página, verifica si hay descripciones guardadas y muéstralas en los <textarea>
+                const descripcionGuardada = localStorage.getItem(`descripcionTarea${index}`);
+                if (descripcionGuardada) {
+                    textarea.value = descripcionGuardada;
+                }
+        }); 
+</script>
+
+-->
+
+<!-- aqui un boton para guardar  -->
+<!--
+<script>
+    // Obtén referencias a los elementos <textarea> y al botón en tu HTML
+const textAreas = document.querySelectorAll('textarea');
+const guardarBoton = document.getElementById('guardar-boton');
+
+// Escucha el evento de cambio en cada <textarea>
+textAreas.forEach((textarea, index) => {
+  textarea.addEventListener('input', () => {
+    const descripcionTarea = textarea.value;
+    localStorage.setItem(`descripcionTarea${index}`, descripcionTarea);
+  });
+
+  // Al cargar la página, verifica si hay descripciones guardadas y muéstralas en los <textarea>
+  const descripcionGuardada = localStorage.getItem(`descripcionTarea${index}`);
+  if (descripcionGuardada) {
+    textarea.value = descripcionGuardada;
+  }
+});
+
+// Escucha el evento de clic en el botón para guardar
+guardarBoton.addEventListener('click', () => {
+  alert('¡Descripciones guardadas exitosamente!');
+});
+
+</script>
+-->
+</body>
+</html>
