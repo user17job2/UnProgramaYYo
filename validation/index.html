@@ -4,45 +4,98 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>validation</title>
-    <link rel="stylesheet" href="styl01.css">
+    <!-- <link rel="stylesheet" href="styl01.css"> -->
+    <link rel="stylesheet" href="stylesFromB.css">
+    <link rel="stylesheet" href="misStyles.css">
     <link rel="shortcut icon" href="0001.png">
 </head>
 <body>
-<section id="uno">
+<section class="container-fluid  p-3 "  id="uno">
+<div class="row p-1">
+ <div class="col-12">
+  <div class="row p-1"> 
+    <div class="col-12 col-md-5 border p-2" >
+                <div class="p-1 text-center g-1 text-light border row justify-content-center" id="decoration" >
+                    <h1 class="col-12 p-5">Hola</h1>
+                    <div class="col-12  p-2" id="content">
+                        <div class="row p-0 gy-0">
+                            <div class="col-3 border " id="lay">
+                                <div class="" id="triangulo">que tal?</div>
+                            </div>
+                            <div class="col-4 border " id="lay">
+                                <div class="d fs-5">enjoy</div>
+                            </div>
+                            <div class="col-4 border " id="lay">
+                                <div class="water-text">Front
+                                    <p class="fs-6">END</p>
+                                </div>
+                            </div>
+                        </div>
+        
+                        <div class="row p-0 gy-1 justify-content-center" id="lays">
+                            <div class="col-12 p-2"  id="layss">
+                                <img src="0001.png" class="" alt="UPYY">
+                            </div>
+                        </div>
+                     
+                        <div class="row p-0 gy-3">
+                            <div class="col-3 border borderanimation" id="lay">
+                                <h3>YHWH</h3>
+                            </div>
+                            <div class="col-8 border an" id="lay">
+                                <canvas id="myCanvas"></canvas>
+                            </div>
+                            <!-- <div class="col-1 border" id="lay">.....</div> -->
+                        </div>
+                    </div>
+                </div>
+    </div>
+    <div  class="col-12 col-md-7 border p-2" id="form">
+     <form class="p-1 text-center g-1 text-light border row justify-content-center" id="app" netlify>
+                    <h3>Control de Acceso</h3>
+                    <!-- nombre  -->
+                    <div class="col-12" id="aCs">
+                        <label for="nom">Nombre</label>
+                        <br>
+                        <br>
+                        <input type="text" id="nom" placeholder="Name">
+                        <div id="text0" class="ttt"></div>
+                    </div>
+                    <!-- apellido --> 
+                    <div class="col-12" id="aCs">
+                        <label for="apellido">Apellido</label>
+                        <br><br>
+                        <input type="text" id="apellido" placeholder="Last Name">
+                        <div id="text1" class="ttt"></div>
 
-    <img src="https://wallpapers.com/images/high/red-and-black-background-dp7vxcnkr528c7n7.webp" alt="." class="back">
-<div id="al"></div>
- 
-    <form id="app" netlify> 
-        <h1>Hola</h1>
-        <h3>Control de Acceso</h3>
-        <!-- nombre  --> <br>
-        <label for="nom">Nombre</label>
-        <input type="text" id="nom" placeholder="Usuario">
-        <div id="text0"></div>
-        <!-- EDAD --> <br>
-        <label for="edad">apellido</label>
-        <input type="text" id="apellido" placeholder="Apellido">
-        <div id="text1"></div>
-        <!-- suscripcion --> <br>
-        <label for="sus">Suscripcion</label>
-        <input type="text" id="sus" placeholder="Codigo de Acceso">
-        <div id="text2"></div>
-        <!-- contrasena --> <br>
-        <label for="pass">Pass</label>
-        <input type="text" id="pass" placeholder="Password">
-        <div id="text3"></div>
+                    </div>
+                    <!-- Codigo --> 
+                    <div class="col-12" id="aCs">
+                        <label for="sus">Codigo de acceso</label>
+                        <br><br>
+                        <input type="text" id="sus" placeholder="access code">
+                        <div id="text2" class="ttt"></div>
+                    </div>
+                    <!-- Pais --> 
+                    <div class="col-12" id="aCs"> 
+                        <label for="pass">Pais</label>
+                        <br><br>
+                        <input type="text" id="pass" placeholder="country">
+                        <div id="text3" class="ttt"></div>
+                    </div>
+                    <button class="col-5" id="valid">validar</button>
 
-        <div id="comm">
-            <textarea name="coment" id="comment" cols="50" rows="10" placeholder="Alguna sugerencia?"></textarea>
-        </div>
+                    <textarea name="" id="" class="col-3" cols="10" rows="2" placeholder="alguna sugerencia?"></textarea>
 
-        <button id="valid" type="submit">validar</button>
-    </form>
+     </form>
+    </div>
+  </div>
+ </div>
+</div>
 
-    <!-- <script src="/Master/functions.js"></script> -->
 </section>
 
+<script src="/node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
 <script src="V-funcions.js"></script>
 <script src="V-recepcion.js"></script> 
 </body>

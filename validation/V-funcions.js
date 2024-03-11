@@ -59,31 +59,31 @@ valid.addEventListener('click',()=>{
 //aqui se muestran los mensajes al usuario para que llene los campos
     valid.addEventListener('click',()=>{
     if(Nam.value.length == 0){
-        document.getElementById("text0").innerHTML = `<h4>por lo menos pon tu nombre</h4>`;
+        document.getElementById("text0").innerHTML = `<p>por lo menos pon tu nombre</p>`;
     }else{
-        document.getElementById("text0").innerHTML = `<h4>.</h4>`;
+        document.getElementById("text0").innerHTML = `<p>.</p>`;
     }
 });
     valid.addEventListener('click', ()=>{
         if(ape.value.length == 0){
-            document.getElementById("text1").innerHTML = `<h4>eeeeeeeeee?</h4>`;
+            document.getElementById("text1").innerHTML = `<p>eeeeeeeeee?</p>`;
         } 
         else{
-            document.getElementById("text1").innerHTML = `<h4>.</h4>`;
+            document.getElementById("text1").innerHTML = `<p>.</p>`;
         }
 });
     valid.addEventListener('click', ()=>{
         if(sus.value == 10001){
-        document.getElementById("text2").innerHTML = `<h4>.</h4>`;
+        document.getElementById("text2").innerHTML = `<p>.</p>`;
     }else{
-        document.getElementById("text2").innerHTML = `<h4>me parece que no eres usuario;)</h4>`;    
+        document.getElementById("text2").innerHTML = `<p>me parece que no eres usuario;)</p>`;    
     };
 });
     valid.addEventListener('click',()=>{
     if(pass.value.length < 6){
-       document.getElementById('text3').innerHTML = `<h4>um um<h4>`;
+       document.getElementById('text3').innerHTML = `<p>um um</p>`;
     }else{
-        document.getElementById('text3').innerHTML = `<h4>.<h4>`; 
+        document.getElementById('text3').innerHTML = `<p>.</p>`; 
     }
 });
 
@@ -105,15 +105,15 @@ valid.addEventListener('click', function(){
                     } 
                 }else{
                     console.log('4Error');
-                    alert('weeeeeeeeee');
+                    alert('weeeeee3eeee');
                 }
             }else{
                 console.log('3Error');
-                alert('weeeeeee');
+                alert('weeeee2ee');
             }
         }else{
             console.log('2Error');
-            alert('weeee');
+            alert('weee1e');
         }
     }else{
         console.log('1Error')
@@ -124,3 +124,44 @@ valid.addEventListener('click', function(){
 function validdd(){
  window.location.href ="https://upyy-unprogramayyo.netlify.app/";
 }
+
+
+  // Obtener el contexto 2D del canvas
+  const canvas = document.getElementById("myCanvas");
+  const ctx = canvas.getContext("2d");
+
+  // Inicializar la posición, velocidad y radio de la pelota
+  let x = Math.floor(Math.random() * canvas.width);
+  let y = Math.floor(Math.random() * canvas.height);
+  let vx = Math.floor(Math.random() * 2);
+  let vy = Math.floor(Math.random() * 4);
+  const radius = 20;
+
+  // Función para animar la pelota
+  function animate() {
+      requestAnimationFrame(animate);
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+      // Dibujar la pelota
+      ctx.beginPath();
+      ctx.arc(x, y, radius, 0, Math.PI * 2);
+      ctx.fillStyle = " #00ffff";
+      ctx.fill();
+
+      // Rebotar en los bordes del canvas
+      if (x + radius > canvas.width || x - radius < 0) {
+          vx = -vx;
+          canvas.style.backgroundColor='green';
+      }
+      if (y + radius > canvas.height || y - radius < 0) {
+          vy = -vy;
+          canvas.style.backgroundColor='blue';
+      }
+
+      // Actualizar la posición
+      x += vx;
+      y += vy;
+  }
+
+  // Iniciar la animación
+  animate();

@@ -1,0 +1,210 @@
+body{
+    background-image: linear-gradient(125deg, rgb(0, 207, 0) 1%, rgb(0, 0, 214) 99%);
+}
+h1{
+    height: 45px;
+}
+#decoration>div{
+    height: 450px;
+    margin-top: -3px;
+}
+#lay{
+    margin-left: 5px;
+    height: 75px;
+    overflow: hidden;
+}
+#layss{
+    margin-left: -5px;
+
+}
+
+#lays{
+    height: 260px;
+    background-color: rgba(22, 79, 129, 0);
+    margin-top: 5px;
+    margin-bottom: 10px; 
+}
+img{
+    width: 350px;
+    height: 250px;
+    border-radius: 2px;
+    margin: auto;
+    margin-top: -5px;
+}
+#content{
+    position: relative;
+    top: -10px;
+    height: 490px;
+    /* border: solid 3px #0074D9; */
+}
+/* un casi triagulo */
+#triangulo{
+    border-right: 30px solid;
+    border-left: 30px solid;
+    border-bottom: 50px solid blue;
+    color: black;
+    font-size: 10px;
+}
+/* cuadrado rotando */
+.d{
+    background-image: linear-gradient(180deg, rgb(33, 33, 255) 1%, rgb(3, 186, 3) 99%);
+    width: 50px;
+    height: 50px;
+    border-radius: 1px;
+    margin: auto;
+    margin-top: 12px;
+    animation: rota 5s linear infinite;
+}
+@keyframes rota {
+    from{
+        transform: rotate(0deg);
+    }to{
+        transform: rotate(360deg);
+    }
+    
+}
+
+canvas {
+    display: block;
+    background-color: #f0f0f000;
+    width: 99%;
+}
+.an{
+    animation: BAchange 12s infinite linear;
+}
+
+.water-text {
+    font-size: 36px;
+    font-weight: bold;
+    text-align: center;
+    position: relative;
+    margin-top: -5px;
+    animation: colorchange 2s infinite alternate;
+}
+@keyframes BAchange {
+    0% {
+        background-color: #00d957; /* Azul brillante */
+    }
+    50% {
+        background-color: #00d9ff; /* Azul cielo */
+    }
+    100% {
+        background-color: #007702; /* Vuelve al azul brillante */
+    }
+}
+@keyframes colorchange {
+    0% {
+        color: #0074D9; /* Azul brillante */
+    }
+    50% {
+        color: #00BFFF; /* Azul cielo */
+    }
+    100% {
+        color: #0074D9; /* Vuelve al azul brillante */
+    }
+}
+
+.borderanimation{
+    border-radius: 5px;
+    box-shadow: inset 0px 0px 10px rgb(0, 41, 128);
+}
+.borderanimation::before{
+    content:'';
+    box-shadow:  0px 0px 10px green;
+
+}
+h3{
+    font-weight: 550;
+    margin-top: 15px;
+    animation: 5s crecer linear infinite;
+}
+@keyframes crecer {
+    0% {
+       transform: scale(1);
+    }
+    50% {
+        transform: scale(1.3);
+    }
+    100% {
+        transform: scale(1);
+    }
+    
+}
+/*  */
+
+input:hover{
+    transform: scale(1.1);
+}
+
+#form, #decoration{
+    height: 92vh;
+    overflow: hidden;
+}
+form, #decoration{
+    border-radius: 5px;
+    height: 90vh;
+}
+input{
+    transition: 0.5s;
+    background-color: rgb(18, 32, 60);
+    text-align: center;
+    color: aliceblue;
+    width: 70%;
+    height: 40px;
+    margin-top: -45px;
+    border-radius: 5px;
+}
+.ttt{
+    font-size: 10px;
+    position: inherit;
+    margin: 0px;
+}
+#aCs{
+    height: 100px;
+}
+
+#valid{
+    font-size: 30px;
+    font-weight: 550;
+    border-radius: 5px;
+    box-shadow: 0px 0px 15px black;
+    background-image: linear-gradient(-125deg, rgb(0, 0, 214) 1%, rgb(0, 207, 0) 99% );
+    transition: 1s;
+
+}
+#valid:hover{
+    animation: cambio 5s linear infinite;
+    background-image: linear-gradient(125deg, rgb(0, 207, 0) 1%, rgb(0, 0, 214) 99%);
+
+    
+}
+
+@keyframes cambio {
+    0%{
+        box-shadow: -1px 0px 25px rgb(0, 0, 0) ;
+    }
+    20%{
+        box-shadow: -7px 0px 25px rgb(38, 38, 38) ;
+    }40%{
+        box-shadow: 0px -7px 25px rgb(66, 66, 66) ;
+    }60%{
+        box-shadow: 7px 0px 25px rgb(84, 84, 84) ;
+    }80%{
+        box-shadow: 0px 7px 25px rgb(255, 255, 255) ;
+    }
+    100%{
+        box-shadow: 0px 0px 25px rgb(63, 65, 62) ;
+    }
+}
+
+textarea{
+    /* position: relative;
+    top: -170px;
+    left: 80%; */
+    width: 75px;
+    height: 55px;
+    background-color: rgb(18, 32, 60);
+}
+textarea::-webkit-scrollbar{
+    background-color: transparent;
+}
