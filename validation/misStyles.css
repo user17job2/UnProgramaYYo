@@ -69,6 +69,11 @@ canvas {
     background-color: #f0f0f000;
     width: 99%;
 }
+canvas::after{
+    content: "developer";
+    background-color: #ededed;
+    position: absolute;
+}
 .an{
     animation: BAchange 12s infinite linear;
 }

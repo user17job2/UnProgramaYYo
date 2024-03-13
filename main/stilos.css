@@ -1,0 +1,151 @@
+body{
+    margin: 0px;
+    padding: 0%;
+    background-image: linear-gradient( 125deg,  rgb(27, 223, 5) 0%, blue 99%);
+}
+body::-webkit-scrollbar{
+    background-color: rgba(0, 0, 169, 0.838);
+    border-radius: 3px;
+}
+
+#contenedor{
+ border-radius: 5px;
+ box-shadow: 0px 0px 15px black;
+ margin-top: 5px;
+ margin-bottom: 5px;
+ /* overflow: scroll; */
+ overflow-x: hidden;
+background-color: rgb(23, 54, 81);
+}
+#contenedor::-webkit-scrollbar{
+background-color: rgba(0, 9, 185, 0.642);
+border-radius: 5px;
+}
+
+#Nav{
+    background-color: rgba(26, 169, 121, 0);
+    height: 750px;
+    border-radius: 5px;
+}
+#Nav-navbar{
+    background-color: rgba(0, 178, 223, 0);
+    margin-top: 5px;
+    border-radius: 5px;
+    box-shadow: 0px 0px 15px rgba(0, 255, 255, 0.678);
+}
+#links,#links>a{
+    text-decoration: none;
+    border-radius: 5px;
+    opacity: 50%;
+    transition: 0.5s;
+    color: rgba(240, 248, 255, 0.461);
+    box-shadow: none;
+}
+#links,#links:hover>a{
+    color: aliceblue;
+    box-shadow: 1px 2px 5px aqua;
+    opacity: 100%;
+}
+#C-Title{
+    color:rgb(130, 169, 223) ;
+    background-color: rgba(240, 248, 255, 0);
+    border-radius: 5px;
+}
+#C-Title>div>button{
+    background-color: rgb(27, 223, 5);
+    border-radius: 5px;
+    font-weight: 600;
+    font-size: 20px;
+}
+#C-Title>div>button:hover{
+    background-color: aquamarine;
+}
+#C-Title>div>input{
+    background-color: rgb(28, 28, 62);
+    color: aliceblue;
+    font-size: 20px;
+    font-weight: 550;
+}
+#C-Title>div>h6{
+    font-size:18px ;
+}
+#T-h{
+    margin-top: -30px;
+    color: aliceblue;
+    animation: cambio 10s infinite linear;
+    transition: 1s;
+}
+#T-h:hover{
+   scale: 1.2;
+}
+@keyframes cambio {
+    0%{
+        color: rgb(27, 223, 5) ;
+    }50%{
+        color: blue;
+    }100%{
+        color: aliceblue;
+    }
+}
+#nav--user{
+    font-weight: 700;
+    font-size: 120px;
+}
+#P-nav{
+    font-family: "Pixelify Sans", sans-serif;
+    color: rgb(0, 216, 202);
+    font-size: 20px;
+    margin-top: -25px;
+    font-weight: 500;
+    text-shadow: 1px 1px 2px rgb(141, 137, 137);
+    animation: typing 8s steps(50) infinite alternate, efecto .5s step-end infinite  alternate-reverse;
+
+}
+.div-p{
+    animation: typing 5s steps(50) infinite alternate, efecto .5s step-end infinite  alternate-reverse;
+}
+@keyframes typing {
+    from{
+        clip-path: polygon(0 0, 0 0, 0 100%, 0% 100%);
+    }to{
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+    }    
+}
+@keyframes efecto { 
+    50%{
+        border-color:  rgba(13, 211, 218, 0.929);
+    }
+}
+#contenido{
+    background-image: linear-gradient( 125deg,  rgb(27, 223, 5) 0%, blue 99%);
+    height: 600px;
+    border-radius: 5px;
+    overflow: hidden;
+    overflow-y: scroll; 
+}
+#contenido::-webkit-scrollbar{
+    background-color: rgba(5, 42, 228, 0.402);
+}
+#proyectos{
+    background-color: rgb(23, 54, 81);
+    height: 350px;
+    overflow: hidden;
+    transform: scale(0.7);
+    transition: 0.5s;
+    text-align: center;
+    font-size: 30px;
+    font-weight: 600;
+    color: aliceblue;
+}
+#proyectos:hover{
+    border-radius: 5px;
+    transform: scale(1);
+    box-shadow: 0px 0px  15px rgb(77, 181, 255);
+    text-shadow: 2px 2px  5px rgb(255, 255, 255);
+}
+#proyectos > a > img{
+    width: 100%;
+    height: 85%;
+    border-radius: 5px;
+    background-color: transparent;
+}

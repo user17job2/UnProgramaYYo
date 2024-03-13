@@ -135,7 +135,7 @@ function validdd(){
   let y = Math.floor(Math.random() * canvas.height);
   let vx = Math.floor(Math.random() * 2);
   let vy = Math.floor(Math.random() * 4);
-  const radius = 20;
+  const radius = 5;
 
   // Función para animar la pelota
   function animate() {
@@ -146,13 +146,15 @@ function validdd(){
       ctx.beginPath();
       ctx.arc(x, y, radius, 0, Math.PI * 2);
       ctx.fillStyle = " #00ffff";
+      ctx.font = "bold 35px sans-serif";
+      ctx.fillText("Developer", 70, 50);
       ctx.fill();
 
       // Rebotar en los bordes del canvas
       if (x + radius > canvas.width || x - radius < 0) {
           vx = -vx;
           canvas.style.backgroundColor='green';
-      }
+        }
       if (y + radius > canvas.height || y - radius < 0) {
           vy = -vy;
           canvas.style.backgroundColor='blue';
