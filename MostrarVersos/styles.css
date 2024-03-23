@@ -1,16 +1,24 @@
 body{
     background-color: antiquewhite;
-
     font-family: "Madimi One", sans-serif;
     font-weight: 400;
     font-style: normal;
 }
-
 #contenedor{
     height: 80vh;
     border-radius: 10px;
     box-shadow: 0px 0px 7px rgb(48, 48, 48);
     margin-top: 5vh;
+    animation: 5s anim  linear infinite;
+}
+@keyframes anim {
+    0%{
+        transform: translate(0px, 0px);
+    }50%{
+        transform: translate(0px, 10px);
+    }100%{
+        transform: translate(0px, 0px);
+    }
 }
 .t{
     font-weight: 550;
@@ -48,4 +56,37 @@ body{
 #btn::after{
     content:"♥";
     color: rgb(237, 217, 189);
+}
+#dato{
+    justify-content: end;
+    position: relative;
+    top: -30px;
+}
+h6{
+    justify-content: end;
+}
+.modal-body{
+    font-family: "Madimi One", sans-serif;
+}
+.boton{
+    background-image: linear-gradient(125deg, rgb(0, 196, 0) 1%, blue 99% );
+    transition: 2s;
+    animation: giro 4s linear infinite;
+}
+@keyframes giro {
+    0%{
+    background-image: linear-gradient(0deg, rgb(0, 196, 0) 1%, blue 99% ); 
+    }32%{
+    background-image: linear-gradient(100deg, rgb(0, 26, 196) 1%, rgb(0, 176, 38) 99% );
+    }63%{
+    background-image: linear-gradient(250deg, rgb(94, 255, 94) 1%, rgb(68, 68, 255) 99% );   
+    }100%{
+    background-image: linear-gradient(360deg, rgb(0, 196, 0) 1%, blue 99% );
+    }
+    
+}
+@media screen and (max-height: 690px) {
+    .contenedor-versos{
+    height: 250px;
+    }
 }
